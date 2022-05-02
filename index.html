@@ -5,7 +5,7 @@
   <title>html</title>
 </head>
 <body>
-  <h1>Heading</h1>
+  <h1> <em>Heading</em> </h1>
   <h2>title for article</h2>
   <!-- ul>li*30>a>{article $} -->
   <!-- p*>lorem40 -->
@@ -13,14 +13,29 @@
   <!-- nav>ul>li*5>a{article$} -->
   <!-- nav>ul>li*5>a[href="#article$"]{article$} -->
   <!-- article#articles$*5>h2{title $ article}+p*2>lorem30 -->
+  <!-- nav>ol>(li>p{outside menu}+ul>li*3>a{link})+(li>p{ancors menu}+ul>li*5>a[href="#article$"]{article$}) -->
+  <!-- nav>ol>(li>p{outside menu}+ul>li*3>a[target="_blank"][href="https://"]{link})+(li>p{ancors menu}+ul>li*5>a[href="#article$"]{article $}) -->
   <nav>
-    <ul>
-      <li><a href="#article1">article1</a></li>
-      <li><a href="#article2">article2</a></li>
-      <li><a href="#article3">article3</a></li>
-      <li><a href="#article4">article4</a></li>
-      <li><a href="#article5">article5</a></li>
-    </ul>
+    <ol>
+      <li>
+        <p>outside menu</p>
+        <ul>
+          <li><a href="https://google.com" target="_blank">Google</a></li>
+          <li><a href="https://fb.com" target="_blank">FB</a></li>
+          <li><a href="./about.html" target="_blank">Contact</a></li>
+        </ul>
+      </li>
+      <li>
+        <p>ancors menu</p>
+        <ul>
+          <li><a href="#article1">article 1</a></li>
+          <li><a href="#article2">article 2</a></li>
+          <li><a href="#article3">article 3</a></li>
+          <li><a href="#article4">article 4</a></li>
+          <li><a href="#article5">article 5</a></li>
+        </ul>
+      </li>
+    </ol>
   </nav>
   <article id="article1">
     <h2>title 1 article</h2>
